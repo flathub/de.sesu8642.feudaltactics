@@ -21,18 +21,12 @@ modules:
     build-commands:
       - install -D feudaltactics-wrapper.sh /app/bin/feudaltactics
       - install -D FeudalTactics-desktop.jar /app/data/FeudalTactics-desktop.jar
-      - install -Dm644 -t /app/share/metainfo de.sesu8642.feudaltactics.appdata.xml
-      - install -Dm644 -t /app/share/applications de.sesu8642.feudaltactics.desktop
-      - install -Dm644 -t /app/share/icons/hicolor/512x512/apps de.sesu8642.feudaltactics.png
+      - install -D source/appstream/de.sesu8642.feudaltactics.appdata.xml /app/share/metainfo/de.sesu8642.feudaltactics.appdata.xml
+      - install -D source/appstream/de.sesu8642.feudaltactics.desktop /app/share/applications/de.sesu8642.feudaltactics.desktop
+      - install -D source/sprites/square_logo_512.png /app/share/icons/hicolor/512x512/apps/de.sesu8642.feudaltactics.png
     sources:
       - type: file
         path: feudaltactics-wrapper.sh
-      - type: file
-        path: de.sesu8642.feudaltactics.desktop
-      - type: file
-        path: de.sesu8642.feudaltactics.png
-      - type: file
-        path: de.sesu8642.feudaltactics.appdata.xml
       - type: file
         url: https://github.com/Sesu8642/FeudalTactics/releases/download/v1.1.1/FeudalTactics-desktop.jar
         sha256: 121e3745f8ff3874f80bef3bfa81b2968a6905305b4938f4b6400f0067ce16b6
@@ -41,3 +35,13 @@ modules:
           url: https://api.github.com/repos/Sesu8642/FeudalTactics/releases/latest
           version-query: .tag_name | sub("^v"; "")
           url-query: .assets[] | select(.name=="FeudalTactics-desktop.jar") | .browser_download_url
+      - type: archive
+        url: https://api.github.com/repos/Sesu8642/FeudalTactics/tarball/v1.1.1
+        sha256: 953d4649cbed6c9e8fe5875c932f07b40a991f8a7e7b013fea96a0b17dfed018
+        archive-type: tar-gzip
+        dest: source/
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/Sesu8642/FeudalTactics/releases/latest
+          version-query: .tag_name | sub("^v"; "")
+          url-query: .tarball_url
