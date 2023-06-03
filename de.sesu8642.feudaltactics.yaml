@@ -10,6 +10,7 @@ finish-args:
   - --share=ipc
   - --device=dri
   - --env=PATH=/app/bin:/app/jre/bin:/usr/bin
+  - --filesystem=~/.prefs
 modules:
   - name: openjdk
     buildsystem: simple
