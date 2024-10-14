@@ -1,6 +1,6 @@
 app-id: de.sesu8642.feudaltactics
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk17
@@ -31,6 +31,8 @@ modules:
       - type: file
         url: https://github.com/Sesu8642/FeudalTactics/releases/download/v1.1.5/FeudalTactics-desktop.jar
         sha256: 27d21508d6f81260bc952a199730acaa928b2693d863d409dd500b323285dc44
+        path: FeudalTactics-desktop.jar
+        sha256: 41981f7a213df00ce231fdad01705eacee6d47139ecf3cc5a4fc5ddc32ad67c5
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Sesu8642/FeudalTactics/releases/latest
