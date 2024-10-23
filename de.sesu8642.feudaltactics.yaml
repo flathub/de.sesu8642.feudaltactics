@@ -1,6 +1,6 @@
 app-id: de.sesu8642.feudaltactics
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk17
@@ -24,21 +24,21 @@ modules:
       - install -D FeudalTactics-desktop.jar /app/data/FeudalTactics-desktop.jar
       - install -D source/appstream/de.sesu8642.feudaltactics.appdata.xml /app/share/metainfo/de.sesu8642.feudaltactics.appdata.xml
       - install -D source/appstream/de.sesu8642.feudaltactics.desktop /app/share/applications/de.sesu8642.feudaltactics.desktop
-      - install -D source/sprites/square_logo_512.png /app/share/icons/hicolor/512x512/apps/de.sesu8642.feudaltactics.png
+      - install -D source/graphics/square_logo_512.png /app/share/icons/hicolor/512x512/apps/de.sesu8642.feudaltactics.png
     sources:
       - type: file
         path: feudaltactics-wrapper.sh
       - type: file
-        url: https://github.com/Sesu8642/FeudalTactics/releases/download/v1.2.1/FeudalTactics-desktop.jar
-        sha256: b34399afd2d6ecc05295e7ddb4122f084edf1b62586081f4f9b01e8907673d08
+        url: https://github.com/Sesu8642/FeudalTactics/releases/download/v1.3.0/FeudalTactics-desktop.jar
+        sha256: 339d047c24d0a951fb9a64b4028330aa646b55099b5602c706cedd467461b296
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Sesu8642/FeudalTactics/releases/latest
           version-query: .tag_name | sub("^v"; "")
           url-query: .assets[] | select(.name=="FeudalTactics-desktop.jar") | .browser_download_url
       - type: archive
-        url: https://api.github.com/repos/Sesu8642/FeudalTactics/tarball/v1.2.1
-        sha256: 14a358e85d30d2eda6a6767c0197ca9e8e6cbcc7239c257e137d12848472f969
+        url: https://api.github.com/repos/Sesu8642/FeudalTactics/tarball/v1.3.0
+        sha256: fcfafd596e4679c38fd8b46d272e40c4d88a7ded142c130e31cd118d17f7d75e
         archive-type: tar-gzip
         dest: source/
         x-checker-data:
