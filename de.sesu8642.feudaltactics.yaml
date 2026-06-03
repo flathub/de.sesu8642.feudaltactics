@@ -6,8 +6,9 @@ sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk17
 command: feudaltactics
 finish-args:
-  - --socket=x11
   - --share=ipc
+  - --socket=fallback-x11
+  - --socket=wayland
   - --device=dri
   - --env=PATH=/app/bin:/app/jre/bin:/usr/bin
   - --filesystem=~/.prefs
