@@ -29,16 +29,16 @@ modules:
       - type: file
         path: feudaltactics-wrapper.sh
       - type: file
-        url: https://github.com/Sesu8642/FeudalTactics/releases/download/v1.5.2/FeudalTactics-desktop.jar
-        sha256: 337fd2325402f39133fd075cd7386983e15480f8498319c4fdf4b9a1720136b5
+        url: https://github.com/Sesu8642/FeudalTactics/releases/download/v1.5.3/FeudalTactics-desktop.jar
+        sha256: 70c64a9c4f2b61f83e5825d2caacf9905aeeda9cba47ce8d5ce9026a7f09b199
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Sesu8642/FeudalTactics/releases/latest
           version-query: .tag_name | sub("^v"; "")
           url-query: .assets[] | select(.name=="FeudalTactics-desktop.jar") | .browser_download_url
       - type: archive
-        url: https://api.github.com/repos/Sesu8642/FeudalTactics/tarball/v1.5.2
-        sha256: 3c8274e27bbde8e234c539159337acdcc37244efe7fbdb673e52dd1c798c89e9
+        url: https://api.github.com/repos/Sesu8642/FeudalTactics/tarball/v1.5.3
+        sha256: f5abcad7a6c9dd29ecdf1e0aab88d3622d64291e576a8f43d0ac877f9090e1d2
         archive-type: tar-gzip
         dest: source/
         x-checker-data:
